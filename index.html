@@ -306,7 +306,7 @@
 <h3 id="Cmd-Markdown-编辑阅读器"><a href="#Cmd-Markdown-编辑阅读器" class="headerlink" title="Cmd Markdown 编辑阅读器"></a><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">Cmd Markdown 编辑阅读器</a></h3><blockquote>
 <p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"><br>除了您现在看到的这个 Cmd Markdown 在线版本，您还可以前往以下网址下载：<br><a href="https://www.zybuluo.com/cmd/#bloc-8" target="_blank" rel="noopener">Windows/Mac/Linux 全平台客户端</a></p>
 </blockquote>
-<h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">数学公式</a></h3><h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a></h3><blockquote>
+<h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a></h3><blockquote>
 <p>[下载]（<a href="https://www.typora.io/#download" target="_blank" rel="noopener">https://www.typora.io/#download</a>)            </p>
 </blockquote>
 <h3 id="小书匠编辑器"><a href="#小书匠编辑器" class="headerlink" title="小书匠编辑器"></a><a href="http://markdown.xiaoshujiang.com/" target="_blank" rel="noopener">小书匠编辑器</a></h3><blockquote>
@@ -318,6 +318,40 @@
 <h3 id="Editor"><a href="#Editor" class="headerlink" title="Editor"></a><a href="http://pandao.github.io/editor.md/" target="_blank" rel="noopener">Editor</a></h3><blockquote>
 <p><img src="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png" alt="cmd-markdown-logo"></p>
 </blockquote>
+<h3 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">数学公式</a></h3><blockquote>
+<p><a href="https://mathjax-chinese-doc.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">MathJax 中文文档</a><br><a href="http://www.ctex.org/OnlineDocuments" target="_blank" rel="noopener">Latex 文档</a><br><a href="http://ipython.org/notebook" target="_blank" rel="noopener">IPython</a></p>
+</blockquote>
+<ul>
+<li><a href="https://blog.csdn.net/u014630987/article/details/78670258" target="_blank" rel="noopener">参考1</a></li>
+<li><p><a href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">参考2</a></p>
+<p><strong>Sample:</strong> </p>
+<script type="math/tex; mode=display">E=mc^2</script></li>
+</ul>
+<h3 id="流程图-Hexo-filter-flowchart"><a href="#流程图-Hexo-filter-flowchart" class="headerlink" title="流程图 Hexo-filter-flowchart"></a>流程图 <a href="https://github.com/bubkoo/hexo-filter-flowchart" target="_blank" rel="noopener">Hexo-filter-flowchart</a></h3><ul>
+<li><p><a href="https://cloud.tencent.com/developer/article/1142260" target="_blank" rel="noopener">参考</a></p>
+<p><strong>Sample:</strong> </p>
+<div id="flowchart-0" class="flow-chart"></div>
+
+
+</li>
+</ul>
+<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a><a href="https://github.com/ele828/hexo-prism-plugin" target="_blank" rel="noopener">代码高亮</a></h3><p><a href="https://blog.csdn.net/u011240016/article/details/79422448" target="_blank" rel="noopener">参考</a> </p>
+<p>``` python<br>@requires_authorization<br>class SomeClass:<br>    pass</p>
+<p>if <strong>name</strong> == ‘<strong>main</strong>‘:</p>
+<pre><code># A comment
+print &#39;hello world&#39;
+</code></pre><p>```<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">#注释
+st=>start: Start:>http://www.baidu.com[blank]
+e=>end:>http://www.baidu.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.baidu.com
+io=>inputoutput: catch something...
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
           
         
@@ -441,11 +475,20 @@
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>the same cmd is:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<p>the same cmd is:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
+<h4 id="Watch-for-File-Changes"><a href="#Watch-for-File-Changes" class="headerlink" title="Watch for File Changes"></a>Watch for File Changes</h4><blockquote>
+<p>Hexo can watch for file changes and regenerate files immediately. Hexo will compare the SHA1 checksum of your files and only write if file changes are detected.<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>  More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>the same cmd is:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="Cleans-the-cache-file-db-json-and-generated-files-public"><a href="#Cleans-the-cache-file-db-json-and-generated-files-public" class="headerlink" title="Cleans the cache file (db.json) and generated files (public)."></a>Cleans the cache file (db.json) and generated files (public).</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/commands#clean" target="_blank" rel="noopener">Deployment</a></p>
+<p><a href="https://www.simon96.online/2018/11/10/hexo-env/" target="_blank" rel="noopener">Hexo-Env</a><br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">中文文档</a><br><img src="https://hexo.io/icon/favicon-196x196.png" alt="cmd-markdown-logo"></p>
 
           
         
@@ -758,6 +801,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
