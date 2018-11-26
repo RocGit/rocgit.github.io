@@ -352,12 +352,9 @@
 
 </li>
 </ul>
-<pre class="mermaid">graph TD;
-起床—>洗漱;
-洗漱—>吃早餐;
-洗漱—>不吃早餐;
-吃早餐—>出门;
-不吃早餐—>出门;</pre>
+<div id="sequence-1"></div>
+
+<div id="sequence-2"></div>
 
 
 <h3 id="7-绘制表格"><a href="#7-绘制表格" class="headerlink" title="7. 绘制表格"></a>7. 绘制表格</h3><div class="table-container">
@@ -390,7 +387,11 @@
 </div>
 <h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a><a href="https://github.com/ele828/hexo-prism-plugin">代码高亮</a></h3><p><a href="https://blog.csdn.net/u011240016/article/details/79422448">参考1</a><br><a href="https://www.ieclipse.cn/en/2016/08/10/Web/hexo-filter-highlight/index.html">参考2</a><br><a href="https://jmblog.github.io/color-themes-for-google-code-prettify/">参考3</a><br><a href="https://liuzhichao.com/2016/hexo-use-prettify-to-highlight-code.html">参考4</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">#注释
+<h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><p>使用 <code>- [ ]</code> 和 <code>- [x]</code> 语法可以创建复选框，实现 todo-list 等功能。例如：</p>
+<ul>
+<li>[x] 已完成事项</li>
+<li>[x] 待办事项1</li>
+<li>[x] 待办事项2<code>- [ ]</code><br>ballot box (empty, that ’ s how it ’ s supposed to be)<br><input type="checkbox" onclick="return false;" checked> bla bla<br><input type="checkbox"> bla blafffd<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">#注释
 st=>start: Start:>http://www.baidu.com[blank]
 e=>end:>http://www.baidu.com
 op1=>operation: My Operation
@@ -403,7 +404,17 @@ st->op1->cond
 cond(yes)->io->e
 cond(no)->sub1(right)->op1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+Bob-->Alice: I am good thanks!</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><textarea id="sequence-1-code" style="display: none">Title:AXI_interface序列图参照物
+AXI_Master1->AXI_slaver: 请求(valid)\n awvalid/arvalid
+AXI_slaver->AXI_Master1: 握手(ready)  \nawready/arready
+AXI_slaver->AXI_Master1: 读返回(rdata)\n rvalid
+AXI_Master2->AXI_slaver: 请求(valid)\n awvalid/arvalid
+AXI_slaver->AXI_Master2: 握手(ready)\n awready/arready
+AXI_slaver->AXI_Master2: 读返回(rdata)\n rvalid</textarea><textarea id="sequence-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-1-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-1", options);</script><textarea id="sequence-2-code" style="display: none">Title:序列图虚线和箭头
+AXI_Master3-->>AXI_slaver1: 请求(valid)\n awvalid/arvalid
+AXI_slaver1-->AXI_Master3: 握手(ready)  awready/arready
+AXI_slaver1->AXI_Master3: 读返回(rdata)\n rvalid</textarea><textarea id="sequence-2-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-2-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-2", options);</script></li>
+</ul>
 
           
         
@@ -889,5 +900,5 @@ Bob-->Alice: I am good thanks!</textarea><textarea id="sequence-0-options" style
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":140,"height":260},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
