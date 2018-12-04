@@ -288,6 +288,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/04/ServerlessDemo1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Roc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/default_avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/04/ServerlessDemo1/" itemprop="url">一个 Serverless offline +　Aws Dynamodb local Demo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-04T10:48:49+08:00">
+                2018-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="从无极而太极，无服务即是服务"><a href="#从无极而太极，无服务即是服务" class="headerlink" title="从无极而太极，无服务即是服务"></a>从无极而太极，无服务即是服务</h2><ul>
+<li><a href="https://www.aliyun.com/jiaocheng/525961.html">Serverless</a>是什么，国内外云计算大厂提供相关技术架构和服务，如 WS Lambda，Azure Functions，Google Cloud Functions，IBM Cloud Functions，阿里云的函数计算等，还有为特定用例提供服务的小型供应商, 例如 Twilio Functions、 PubNub Functions、 Auth0 Webtask。还有一些使用 Docker 和 Kubernetes 构建的 serverless 计算实现，例如 Kubeless 和 Fission。</li>
+<li><a href="https://serverless.com/">Serverless官网</a></li>
+<li><a href="https://github.com/serverless/serverless">Serverless Framework Github</a></li>
+</ul>
+<p>本地环境：Win7，Git，Nodejs(npm)</p>
+<h4 id="1-安装全局-serverless-framework"><a href="#1-安装全局-serverless-framework" class="headerlink" title="1.安装全局 serverless framework"></a>1.安装全局 serverless framework</h4><pre><code>npm install -g serverless
+</code></pre><p>安装完验证一下</p>
+<pre><code>serverless -v
+</code></pre><h4 id="2-设置-aws-凭证"><a href="#2-设置-aws-凭证" class="headerlink" title="2.设置 aws 凭证"></a>2.设置 aws 凭证</h4><p>我这里没有aws账号，暂且用官方的示例：<a href="https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">临时安全凭证</a><br>将其导入到本地</p>
+<pre><code>serverless config credentials --provider aws --key AKIAIOSFODNN7EXAMPLE --secret wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+</code></pre><p>将会自动生成配置到用户目录下 ~/.aws/credentials</p>
+<p>下面先下载官方Demo在本地配置跑一下</p>
+<h4 id="3-下载aws-node-rest-api-with-dynamodb-and-offline"><a href="#3-下载aws-node-rest-api-with-dynamodb-and-offline" class="headerlink" title="3.下载aws-node-rest-api-with-dynamodb-and-offline"></a>3.下载<a href="https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline">aws-node-rest-api-with-dynamodb-and-offline</a></h4><pre><code>serverless install -u https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline -n aws-node-rest-api-with-dynamodb-and-offline
+</code></pre><h4 id="4-安装必要依赖"><a href="#4-安装必要依赖" class="headerlink" title="4.安装必要依赖"></a>4.安装必要依赖</h4><pre><code>cd aws-node-rest-api-with-dynamodb-and-offline
+npm install
+</code></pre><p><img src="/2018/12/04/ServerlessDemo1/1.jpg" alt="1"></p>
+<h4 id="5-安装-aws-dynamodb"><a href="#5-安装-aws-dynamodb" class="headerlink" title="5.安装 aws dynamodb"></a>5.安装 aws dynamodb</h4><pre><code>serverless dynamodb install
+</code></pre><h4 id="6-启动本地离线服务"><a href="#6-启动本地离线服务" class="headerlink" title="6.启动本地离线服务"></a>6.启动本地离线服务</h4><pre><code>serverless offline start
+</code></pre><p><img src="/2018/12/04/ServerlessDemo1/2.jpg" alt="2"></p>
+<h4 id="7-另外打开一个GitBash，迁移数据，这一步不执行也行，因为会报-Serverless-DynamoDB-Warn-table-aws-node-rest-api-with-dynamodb-and-offline-dev-already-exists"><a href="#7-另外打开一个GitBash，迁移数据，这一步不执行也行，因为会报-Serverless-DynamoDB-Warn-table-aws-node-rest-api-with-dynamodb-and-offline-dev-already-exists" class="headerlink" title="7.另外打开一个GitBash，迁移数据，这一步不执行也行，因为会报 Serverless: DynamoDB - Warn - table aws-node-rest-api-with-dynamodb-and-offline-dev already exists"></a>7.另外打开一个GitBash，迁移数据，这一步不执行也行，因为会报 <code>Serverless: DynamoDB - Warn - table aws-node-rest-api-with-dynamodb-and-offline-dev already exists</code></h4><pre><code>serverless dynamodb migrate
+</code></pre><h4 id="8-打开浏览器地址栏输入-http-localhost-8000-shell-就可以看到DynamoDB-JavaScript-Shell"><a href="#8-打开浏览器地址栏输入-http-localhost-8000-shell-就可以看到DynamoDB-JavaScript-Shell" class="headerlink" title="8.打开浏览器地址栏输入 http://localhost:8000/shell/ 就可以看到DynamoDB JavaScript Shell"></a>8.打开浏览器地址栏输入 <code>http://localhost:8000/shell/</code> 就可以看到DynamoDB JavaScript Shell</h4><p><img src="/2018/12/04/ServerlessDemo1/3.jpg" alt="3"></p>
+<p>在控制台输入 <code>tutorial.start()</code> 可以漫游Dynamodb基本操作<br><img src="/2018/12/04/ServerlessDemo1/4.jpg" alt="4"></p>
+<h4 id="9-浏览器地址栏输入-http-localhost-3000-todos-请求到的是空json对象"><a href="#9-浏览器地址栏输入-http-localhost-3000-todos-请求到的是空json对象" class="headerlink" title="9.浏览器地址栏输入 http://localhost:3000/todos 请求到的是空json对象"></a>9.浏览器地址栏输入 <code>http://localhost:3000/todos</code> 请求到的是空json对象</h4><p><img src="/2018/12/04/ServerlessDemo1/5.jpg" alt="5"></p>
+<p>控制台输出红圈响应：</p>
+<p><img src="/2018/12/04/ServerlessDemo1/6.jpg" alt="6"></p>
+<h4 id="10-下面通过-curl插入一条数据"><a href="#10-下面通过-curl插入一条数据" class="headerlink" title="10.下面通过 curl插入一条数据"></a>10.下面通过 curl插入一条数据</h4><p><img src="/2018/12/04/ServerlessDemo1/7.jpg" alt="7"></p>
+<p>控制台输出响应：</p>
+<p><img src="/2018/12/04/ServerlessDemo1/8.jpg" alt="8"></p>
+<p>重复第9步，浏览器输出数据：</p>
+<p><img src="/2018/12/04/ServerlessDemo1/9.jpg" alt="9"></p>
+<h4 id="11-通过火狐插件-HttpRequester插件再插入一条数据"><a href="#11-通过火狐插件-HttpRequester插件再插入一条数据" class="headerlink" title="11.通过火狐插件 HttpRequester插件再插入一条数据"></a>11.通过火狐插件 HttpRequester插件再插入一条数据</h4><p><img src="/2018/12/04/ServerlessDemo1/10.jpg" alt="10"></p>
+<p>控制台输出响应：</p>
+<p><img src="/2018/12/04/ServerlessDemo1/11.jpg" alt="11"></p>
+<p>重复第9步，浏览器输出数据：</p>
+<p><img src="/2018/12/04/ServerlessDemo1/12.jpg" alt="12"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/30/OutlookAutoForwardSettings/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -847,7 +1002,7 @@ AXI_slaver1->AXI_Master3: 读返回(rdata)\n rvalid</textarea><textarea id="sequ
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
