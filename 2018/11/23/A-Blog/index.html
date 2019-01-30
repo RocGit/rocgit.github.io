@@ -464,7 +464,18 @@
 ballot box (empty, that ’ s how it ’ s supposed to be)
 <input type='checkbox' onclick='return false;' checked> bla bla
 <input type='checkbox' > bla blafffd -->
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">#注释
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><textarea id="sequence-1-code" style="display: none">Title:AXI_interface序列图参照物
+AXI_Master1->AXI_slaver: 请求(valid)\n awvalid/arvalid
+AXI_slaver->AXI_Master1: 握手(ready)  \nawready/arready
+AXI_slaver->AXI_Master1: 读返回(rdata)\n rvalid
+AXI_Master2->AXI_slaver: 请求(valid)\n awvalid/arvalid
+AXI_slaver->AXI_Master2: 握手(ready)\n awready/arready
+AXI_slaver->AXI_Master2: 读返回(rdata)\n rvalid</textarea><textarea id="sequence-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-1-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-1", options);</script><textarea id="sequence-2-code" style="display: none">Title:序列图虚线和箭头
+AXI_Master3-->>AXI_slaver1: 请求(valid)\n awvalid/arvalid
+AXI_slaver1-->AXI_Master3: 握手(ready)  awready/arready
+AXI_slaver1->AXI_Master3: 读返回(rdata)\n rvalid</textarea><textarea id="sequence-2-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-2-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-2", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">#注释
 st=>start: Start:>http://www.baidu.com[blank]
 e=>end:>http://www.baidu.com
 op1=>operation: My Operation
@@ -475,18 +486,7 @@ io=>inputoutput: catch something...
 
 st->op1->cond
 cond(yes)->io->e
-cond(no)->sub1(right)->op1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><textarea id="sequence-1-code" style="display: none">Title:AXI_interface序列图参照物
-AXI_Master1->AXI_slaver: 请求(valid)\n awvalid/arvalid
-AXI_slaver->AXI_Master1: 握手(ready)  \nawready/arready
-AXI_slaver->AXI_Master1: 读返回(rdata)\n rvalid
-AXI_Master2->AXI_slaver: 请求(valid)\n awvalid/arvalid
-AXI_slaver->AXI_Master2: 握手(ready)\n awready/arready
-AXI_slaver->AXI_Master2: 读返回(rdata)\n rvalid</textarea><textarea id="sequence-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-1-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-1", options);</script><textarea id="sequence-2-code" style="display: none">Title:序列图虚线和箭头
-AXI_Master3-->>AXI_slaver1: 请求(valid)\n awvalid/arvalid
-AXI_slaver1-->AXI_Master3: 握手(ready)  awready/arready
-AXI_slaver1->AXI_Master3: 读返回(rdata)\n rvalid</textarea><textarea id="sequence-2-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-2-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-2", options);</script></p>
+cond(no)->sub1(right)->op1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
       
     </div>
@@ -602,7 +602,7 @@ AXI_slaver1->AXI_Master3: 读返回(rdata)\n rvalid</textarea><textarea id="sequ
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -669,7 +669,7 @@ AXI_slaver1->AXI_Master3: 读返回(rdata)\n rvalid</textarea><textarea id="sequ
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
